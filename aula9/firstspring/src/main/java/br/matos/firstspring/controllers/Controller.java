@@ -12,4 +12,5 @@ public class Controller {
     public ResponseEntity<String> get(){
         return ResponseEntity.ok("Controller exemplo hello OK");
     }
+    
 }
