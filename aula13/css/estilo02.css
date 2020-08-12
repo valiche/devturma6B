@@ -1,0 +1,24 @@
+body{
+    font-family: Itau Display, Arial, Helvetica, sens-serif;
+background-color: antiquewhite;
+}
+
+p{
+    color: darkblue;
+    font-size: 16px;
+    margin: 2px;
+}
+
+.title, .subtitle{
+    color: darkorange;
+    margin: 5px;
+}
+
+.subtitle{
+    font-style: italic;
+}
+
+.indisponivel{
+    color: gainsboro;
+    font-size: smaller;
+}

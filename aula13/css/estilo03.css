@@ -1,0 +1,25 @@
+body{
+    font-family: Itau Display, Arial, Helvetica, sens-serif;
+    color: rgb(225, 120, 50);
+    font-size: larger;
+}
+
+.bloco{
+    color: darkblue;
+    font-size: 16px;
+    background-color: darkmagenta;
+}
+
+#linha{
+    color: darkorange;
+    font-size: 1.5em;
+}
+
+#padding{
+    background-color: azure;
+    margin: 20px;
+    border-style: solid;
+    border-color: black;
+    padding: 5px;
+    padding-left: 10px;
+}
