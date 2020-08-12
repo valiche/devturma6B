@@ -1,0 +1,21 @@
+.container{
+    color: black;
+    background-color: wheat;
+}
+
+#menu{
+    background-color: whitesmoke;
+    color: darkgrey;
+    margin-left: 2px;
+    border-style: groove;
+    border-radius: 5px;
+    border-width: 1px;
+    padding: 2px;
+}
+
+#col2{
+    background-color:rgb(169, 236, 169);
+    color:rgb(247, 26, 136);
+    margin-right: 2px;
+    padding: 0px;
+}
