@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Relatórios</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/estilo.css">
+    <script src="/js/relatorio.js"></script>
+</head>
+
+<body onload="validaLogin()">
+    
+    <div class="container h=100 d=flex">
+        <div class="row w=100 align-itens-center">
+            <div class="col mx-auto">
+                <div class="jumbotron">
+                    <h1 class="display-4 text-center">Relatórios</h1>
+                    <hr class="my-4">
+                    <div class="row justified-content-between">
+                        <div id="foto" class="col-8">
+                        <div class="media">
+                            <div id="imguser"> 
+                            </div>
+                            <p class="text-center" id="user"></p>
+                        </div>
+                        </div>
+                            <button class="btn btn-outline-primary" onclick="logout()">Sair</button>
+                    </div>
+                    <hr class="my-4">
+                    <div class="row">
+                        <p class="text-center">Selecione as informações desejadas</p>
+                        <div class="col">
+                            <div class="text-center" id="msgErro"></div>
+                        </div>
+                    </div>
+                    <div class="row justified-content-between">
+                        <div class="col">
+                            <form>
+                                <label for="agencia">Agência: </label>
+                                <select id="sel_agencias">   
+                                </select>
+                                <br><label for="date">Data: </label>
+                                <input type="date" name="date" id="date">
+                                <br><label for="client">Cliente: </label>
+                                <input type="text" name="client" id="client">
+                            </form>
+                        </div>
+                        <div class="col-3 align-itens-center">
+                            <br>
+                            <button class="btn btn-outline-primary" onclick="">Gerar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

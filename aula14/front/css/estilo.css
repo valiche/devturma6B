@@ -5,3 +5,17 @@ body, html{
 .form-control{
     margin-bottom: 15px;
 }
+
+#msgErro{
+    color: red;
+}
+
+img{
+    height: 80px;
+    width: 70px;
+    margin: 5px;
+}
+
+p{
+    margin-left: 5px;
+}

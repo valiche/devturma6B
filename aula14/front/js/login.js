@@ -1,4 +1,4 @@
-function autenticar(event){
+function autenticar(event) {
     event.preventDefault();
     let usuario = document.getElementById("user");
     let senha = document.getElementById("password");
@@ -12,8 +12,8 @@ function autenticar(event){
     let cabecalho = {
         method: 'POST',
         body: JSON.stringify(loginMsg),
-        headers:{
-            'Content-type':'application/json'
+        headers: {
+            'Content-type': 'application/json'
         }
     }
 
@@ -21,6 +21,15 @@ function autenticar(event){
 
 }
 
-function tratarResposta(res){
-console.log(res);
+function tratarResposta(res) {
+    if (res.status == 200) {
+        res.json().then(res => fazerLogin(res));
+    } else {
+        document.getElementById("msgErro").innerHTML = "Usuário/senha inválido";
+    }
+}
+
+function fazerLogin(res) {
+    localStorage.setItem("userLogged", JSON.stringify(res));
+    window.location = "relatorio.html";
 }
