@@ -2,7 +2,7 @@ body, html{
     height: 100%;
 }
 
-.form-control, input{
+.form-control{
     margin-bottom: 15px;
 }
 

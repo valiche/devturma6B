@@ -1,0 +1,44 @@
+package br.gama.projagenda.controller;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RestController;
+
+import br.gama.projagenda.dao.AgendamentoDAO;
+import br.gama.projagenda.model.Agendamento;
+
+@RestController
+@CrossOrigin(origins = "*")
+public class RelatorioController {
+  @Autowired
+  private AgendamentoDAO dao;
+
+  @GetMapping("/relatorio")
+  public List<Agendamento> getAgendamentos() {
+    List<Agendamento> lista = (List<Agendamento>) dao.findAll();
+    return lista;
+  }
+
+  @PostMapping("/relatorio/cliente")
+  public List<Agendamento> agendaCl(@RequestBody Agendamento nome) {
+    List<Agendamento> lista = dao.findAllByNome(nome.getNome());
+    return lista;
+  }
+
+  @PostMapping("/relatorio/dia")
+  public List<Agendamento> agendaDia(@RequestBody Agendamento agenda) {
+    List<Agendamento> lista = dao.findAllByDataAgendamento(agenda.getDataAgendamento());
+    return lista;
+  }
+
+  @PostMapping("/relatorio/agencia")
+  public List<Agendamento> agendaAg(@RequestBody Agendamento agenda) {
+    List<Agendamento> lista = dao.findAllByAgencia(agenda.getAgencia());
+    return lista;
+  }
+}

@@ -35,33 +35,8 @@ function preencheAgencias(res) {
 }
 
 function gerarRelatorio(event) {
-    event.preventDefault();
-    let agenc = document.getElementById("cxagencia").checked;
-    let date = document.getElementById("cxdate").checked;
-    let client = document.getElementById("cxclient").checked;
-    console.log(client);
-    if (client == true) {
-        console.log('client');
-        let agencia = document.getElementById("sel_agencia");
-        let data = document.getElementById("date");
-        let cliente = document.getElementById("client");
-        
-        let relatorioMsg = {
-            nome: cliente.value
-        }
 
-        let cabecalho = {
-            method: 'POST',
-            body: JSON.stringify(relatorioMsg),
-            headers: {
-                'Content-type': 'application/json'
-            }
-        }
-        console.log(cabecalho);
-        fetch('http://localhost:8080/relatorio/cliente', cabecalho).then(res => res.json()).then(res => tratarRelatorio(res));
-    }else{
-        fetch('http://localhost:8080/relatorio').then(res => res.json()).then(res => tratarRelatorio(res));
-    }
+    fetch('http://localhost:8080/relatorio').then(res =>res.json()).then(res => tratarRelatorio(res));
 
 }
 

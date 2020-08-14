@@ -51,7 +51,3 @@ function tratarResposta(res) {
         document.getElementById("msgNOK").innerHTML = "Agendamento não realizado. Tente novamente.";
     }
 }
-
-function logout() {
-    window.location = "index.html";
-}
