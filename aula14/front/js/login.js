@@ -33,3 +33,7 @@ function fazerLogin(res) {
     localStorage.setItem("userLogged", JSON.stringify(res));
     window.location = "relatorio.html";
 }
+
+function agendar() {
+    window.location = "agendamento.html";
+}

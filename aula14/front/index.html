@@ -7,17 +7,19 @@
     <title>Login Agenda</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
         integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-<link rel="stylesheet" href="/css/estilo.css">
-<script src="/js/login.js"></script>   
+    <link rel="stylesheet" href="/css/estilo.css">
+    <script src="/js/login.js"></script>
 </head>
 
 <body>
     <div class="container h=100 d=flex">
         <div class="row w=100 align-itens-center">
             <div class="col-8 mx-auto">
-                <div class="jumbotron">
-                    <h1 class="display-4 text-center">Autenticação</h1>
-                    <p class="text-center">Sistema de Agendamento das Agências Bancárias. <br> Registre-se para consultar os relatórios.</p>
+                <div class="jumbotron text-center">
+                    <h1 class="text-center">Sistema de Agendamento</h1>
+                    <hr class="my-4">
+                    <p> Sou cliente:</p>
+                    <button class="btn btn-outline-primary" onclick="agendar()">Cadastrar agendamento</button>
                     <hr class="my-4">
                     <div class="row">
                         <div class="col">
@@ -25,16 +27,18 @@
                         </div>
                     </div>
                     <form>
+                        <h3 class="display-4 text-center">Autenticação</h3>
+                        <p> Registre-se para consultar os relatórios.</p>
                         <input class="form-control" type="text" id="user" placeholder="e-mail ou rackf">
                         <input class="form-control" type="password" id="password" placeholder="senha">
-                    <div class="col text-center">
-                        <button class="btn btn-outline-primary" onclick="autenticar(event)">Entrar</button>
-                    </div>
+                        <div class="col text-center">
+                            <button class="btn btn-outline-primary" onclick="autenticar(event)">Entrar</button>
+                        </div>
                     </form>
-
                 </div>
             </div>
         </div>
+    </div>
     </div>
 
 </body>

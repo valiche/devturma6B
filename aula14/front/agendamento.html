@@ -4,14 +4,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login Agenda</title>
+    <title>Agendamento</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
         integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
     <link rel="stylesheet" href="/css/estilo.css">
     <script src="/js/agendamento.js"></script>
 </head>
 
-<body>
+<body onload="obterAgencias()">
     <div class="container h=100 d=flex">
         <div class="row w=100 align-itens-center">
             <div class="col-8 mx-auto">
@@ -21,7 +21,8 @@
                     <hr class="my-4">
                     <div class="row">
                         <div class="col">
-                            <div class="text-center" id="msgErro"></div>
+                            <div class="text-center" id="msgOK"></div>
+                            <div class="text-center" id="msgNOK"></div>
                         </div>
                     </div>
                     <form>
@@ -31,11 +32,14 @@
                         <input class="form-control" type="text" name="email" id="email">
                         <label for="celular">Celular/ Whatsapp: </label>
                         <input class="form-control" type="text" name="celular" id="celular">
+                        <label for="agencia">Agência: </label>
+                        <select class="form-control" id="sel_agencias"></select>
                         <label for="date">Data: </label>
                         <input class="form-control" type="date" name="date" id="date">
-
+                        <label for="date">Hora Início: </label>
+                        <input class="form-control" type="time" name="timein" id="timein">
                         <div class="col text-center">
-                            <button class="btn btn-outline-primary" onclick="">Agendar</button>
+                            <button class="btn btn-outline-primary" onclick="novoAgendamento(event)">Agendar</button>
                         </div>
                     </form>
 

@@ -6,5 +6,5 @@ import br.gama.projagenda.model.Agencia;
 
 
 public interface AgenciaDAO extends CrudRepository<Agencia, Integer>{
-    public Agencia findByIdAgencia(int id);
+
 }
